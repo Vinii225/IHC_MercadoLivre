@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-section {
+    background-color: #ffe600;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}   
