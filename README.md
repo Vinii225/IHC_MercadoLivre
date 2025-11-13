@@ -13,7 +13,7 @@
 - Vinícius Ares Monteiro de Lima - 20242370007
 - Luis Eduardo Santos Gomes - 20242370001
 - Luana Gabriella Pereira Macedo - 20242370026
-- Ramotep Lopes Rodrigues Souza Dantas - XXXXXXXXXXX 
+- Ramotep Lopes Rodrigues Souza Dantas - XXXXXXXXXXX
 
 ### Figma
 

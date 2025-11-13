@@ -4,8 +4,36 @@
     box-sizing: border-box;
 }
 
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.main-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
 .footer-section {
     background-color: #ffe600;
     padding: 20px 0;
-    font-family: Arial, sans-serif;
 }   
+
+
+
+.footer-down ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-down ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-down ul li a:hover {
+    text-decoration: underline;
+}
