@@ -15,23 +15,60 @@
     font-weight: bold;
 }
 
-.footer-section {
+/* 
+Footer Styles
+*/
+footer {
     background-color: #ffe600;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.footer-down {
     padding: 20px 0;
-}   
-
-
+}
 
 .footer-down ul {
     list-style: none;
     display: flex;
     gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-down ul li a {
     text-decoration: none;
     color: #000;
+    font-size: 14px;
 }
 
 .footer-down ul li a:hover {
