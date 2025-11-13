@@ -15,6 +15,8 @@
 - Luana Gabriella Pereira Macedo - 20242370026
 - Ramotep Lopes Rodrigues Souza Dantas - XXXXXXXXXXX 
 
+### Figma
+
 ### Atividade
 
 Desenvolva uma tela de um sistema responsivo (Web e mobile), contendo obrigatoriamente um header (navegação global com logo, serviços e seções principais – navegação primária), o footer e uma página qualquer do sistema. A atividade se resumirá exclusivamente a uma única tela. Deve conter ao menos três componentes/elementos de entrada, três de saída, um de navegação, um de ajuda e um de agrupamento. Os elementos/componentes devem ser contextualizados ao sistema que se está propondo (não aleatórios). Considere os princípios de design, usabilidade e UX, além de tudo que vimos no curso até agora, minimize o esforço cognitivo dos usuários.  
