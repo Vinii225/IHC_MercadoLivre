@@ -12,6 +12,10 @@ import carteira from './assets/Images/carteira.svg'
 import seguranca from './assets/Images/segurança.svg'
 import teclado from './assets/Images/teclado.png'
 import tablet from './assets/Images/tablet.png'
+import search from './assets/Images/search.svg'
+import dumbbell from './assets/Images/categorias/dumbbell.png'
+import camisa from './assets/Images/categorias/camisa.png'
+
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -25,15 +29,15 @@ function App() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#EDEDED]">
+    <div className="min-h-screen bg-[#F9F9F9]">
       {/* Header */}
-      <header className="bg-[#FFE600]">
-        <div className="container mx-auto px-6 py-4">
+      <header className="bg-[#FFFFFF]">
+        <div className="container mx-auto px-6 py-0">
           {/* Top Row - Logo and Icons */}
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-0">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img src={logo} alt="Mercado Livre" className="h-12 w-auto" />
+              <img src={logo} alt="Mercado Livre" className="h-20 w-auto" />
             </div>
 
             {/* Icons */}
@@ -50,34 +54,38 @@ function App() {
 
           {/* Search Bar - Segunda linha, maior */}
           <div className="mb-4">
-            <div className="relative flex items-center max-w-4xl mx-auto">
-              <input
-                type="text"
-                placeholder="Buscar produtos..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 text-base rounded-l-sm border-none focus:outline-none text-gray-700"
-              />
-              <button className="bg-blue-500 px-10 py-3 text-white font-normal text-base rounded-r-sm hover:bg-blue-600 transition-colors">
-                Explore now
-              </button>
-            </div>
-          </div>
+                <div className="relative flex items-center max-w-4xl mx-auto">
+                    <div className="flex items-center w-full gap-3 px-4 py-3 bg-white border border-[#FFE600] rounded-l-[10px] shadow-md">
+                    <img src={search} alt="Search icon" className="w-5 h-5 opacity-70" />
+
+                    <input
+                        type="text"
+                        placeholder="Buscar produtos..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full text-base text-gray-800 border-none focus:outline-none"
+                    />
+                    </div>
+                    <button className="bg-[#FFE600] px-10 py-3 text-black font-normal text-base rounded-r-[10px] shadow-md hover:bg-[#e0cd22] transition-colors">
+                    Search
+                    </button>
+                </div>
+                </div>
 
           {/* Navigation */}
-          <nav className="flex gap-8 text-sm bg-white py-3 -mx-6 px-6">
+          <nav className="flex gap-8 text-base bg-white py-3 -mx-6 pl-10 pr-6">
             <a href="#" className="text-gray-700 hover:text-gray-900 font-normal transition-colors">Ofertas</a>
             <a href="#" className="text-gray-700 hover:text-gray-900 font-normal transition-colors">Cupons</a>
             <a href="#" className="text-gray-700 hover:text-gray-900 font-normal transition-colors">Vender</a>
             <a href="#" className="text-gray-700 hover:text-gray-900 font-normal transition-colors">Compras</a>
-          </nav>
+        </nav>
         </div>
       </header>
 
       {/* Banner */}
-      <section className="bg-white">
+      <section className="bg-[#EDEDED]">
         <div className="container mx-auto px-6 py-16">
-          <div className="flex items-center justify-center bg-white rounded-2xl p-16 border-2 border-[#FFE600] shadow-sm">
+          <div className="flex items-center justify-center bg-[#F9F9F9] rounded-2xl p-16 border-2 border-[#FFE600] shadow-sm">
             <div className="flex items-center gap-24 w-full max-w-6xl">
               <img src={caixa} alt="Package" className="h-56 w-56 object-contain flex-shrink-0" />
               <div className="flex-1 text-left pl-8">
@@ -105,23 +113,35 @@ function App() {
           {/* Fashion */}
           <div className="bg-white border-2 border-[#D4AF37] rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
             <div className="mb-4">
-              <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-              </svg>
+              <img src={camisa} alt="Camisa" className="w-16 h-16 object-contain" />
+
             </div>
             <p className="text-gray-700 text-center font-light text-lg">Fashion</p>
           </div>
 
           {/* Eletrônicos - Highlighted */}
-          <div className="bg-[#FFFACD] border-2 border-[#FFE600] rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer shadow-sm">
-            <div className="mb-4">
-              <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+          <div className="
+                bg-white 
+                border-2 border-[#D4AF37] 
+                rounded-xl 
+                p-8 
+                flex flex-col items-center justify-center 
+                cursor-pointer 
+                transition-all 
+                hover:bg-[#FFFACD] 
+                hover:border-[#FFE600] 
+                hover:shadow-md
+                ">
+                <div className="mb-4">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a 2 2 0 012 2v9a2 2 0 01-2 2H5a 2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-700 text-center font-light text-lg">
+                    Eletrônicos
+                </p>
             </div>
-            <p className="text-gray-700 text-center font-light text-lg">Eletrônicos</p>
-          </div>
 
           {/* Livros */}
           <div className="bg-white border-2 border-[#D4AF37] rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
@@ -136,9 +156,7 @@ function App() {
           {/* Esporte */}
           <div className="bg-white border-2 border-[#D4AF37] rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
             <div className="mb-4">
-              <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-              </svg>
+              <img src={dumbbell} alt="Esporte" className="w-16 h-16 object-contain" />
             </div>
             <p className="text-gray-700 text-center font-light text-lg">Esporte</p>
           </div>
@@ -153,7 +171,8 @@ function App() {
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer"
             >
-              <div className="aspect-square bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <div className="h-50 bg-white flex items-center justify-center p-4 border-b border-gray-100">
+
                 <img
                   src={product.image}
                   alt={product.name}
@@ -175,12 +194,13 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#FFE600] mt-16">
+      <footer className="bg-[#FFE600] mt-10">
         <div className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-3 gap-12 mb-10">
+          <div className="grid grid-cols-3 gap-6 mb-10 justify-items-center">
+
             {/* Payment Methods */}
             <div className="flex items-start gap-6">
-              <img src={carteira} alt="Payment" className="h-16 w-16 flex-shrink-0 mt-1" />
+              <img src={carteira} alt="Payment" className="h-12 w-12 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-900 text-lg mb-2">Escolha como pagar</p>
                 <p className="text-base text-gray-800">cartão, boleto ou Pix.</p>
@@ -189,7 +209,7 @@ function App() {
 
             {/* Security */}
             <div className="flex items-start gap-6">
-              <img src={seguranca} alt="Security" className="h-16 w-16 flex-shrink-0 mt-1" />
+              <img src={seguranca} alt="Security" className="h-12 w-12 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-900 text-lg mb-2">Segurança, do início ao fim</p>
                 <p className="text-base text-gray-800">Não gostou? Devolveu!</p>
@@ -198,21 +218,21 @@ function App() {
 
             {/* Free Shipping */}
             <div className="flex items-start gap-6">
-              <img src={caixafooter} alt="Shipping" className="h-16 w-16 flex-shrink-0 mt-1" />
+              <img src={caixafooter} alt="Shipping" className="h-12 w-12 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-semibold text-gray-900 text-lg mb-2">Frete grátis a partir de R$ xx</p>
-                <p className="text-base text-gray-800">você só paga frete grátis em milhares de produtos.</p>
+                <p className="font-semibold text-gray-900 text-lg mb-2">Frete grátis a partir de R$ 19</p>
+                <p className="text-base text-gray-800">você tem frete grátis em milhares de produtos.</p>
               </div>
             </div>
           </div>
 
           {/* Footer Links */}
-          <div className="pt-6 flex flex-wrap justify-center gap-6 text-base text-gray-800">
+          <div className="pt-3 flex flex-wrap justify-center gap-4 text-base text-gray-800">
             <a href="#" className="hover:text-gray-900 font-normal">Trabalhe conosco</a>
             <span className="text-gray-700">|</span>
             <a href="#" className="hover:text-gray-900 font-normal">Termos e condições</a>
             <span className="text-gray-700">|</span>
-            <a href="#" className="hover:text-gray-900 font-normal">Contate</a>
+            <a href="#" className="hover:text-gray-900 font-normal">Contato</a>
             <span className="text-gray-700">|</span>
             <a href="#" className="hover:text-gray-900 font-normal">Acessibilidade</a>
           </div>
